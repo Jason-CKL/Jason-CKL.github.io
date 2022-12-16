@@ -1,0 +1,415 @@
+/**
+ * WEB222 – Final Assignment
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:       <Chun Kit Li>
+ *      Student ID: <156232217>
+ *      Date:       <12 Dec, 2022>
+ *      Section:    <NFF>
+ */
+ 
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+table {
+  border-style: hidden;
+}
+
+.heading {
+  padding-top: 40px;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #242557;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ==================== Navbar ==================== */
+.navBar {
+  overflow: hidden;
+  background-color: #0F0119;
+  position: center fixed ;
+  top: 0;
+  bottom: 0%;
+  display: grid;
+  grid-template-columns:max-content;
+  width: 100%;
+  max-height: 5px;
+  z-index: 500;
+}
+
+.navItem {
+  list-style: none;
+  display: inline-block;
+  padding: 15px 45px 15px 0;
+  position: relative;
+}
+
+.navLink {
+  color: #ffe600;
+  text-decoration: none;
+  font-weight: .9rem;
+
+}
+
+.navTtem::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #FFAB8f;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.navItem:hover::after{
+  width: 100%;
+}
+
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.3s;
+}
+
+.menuIcon div {
+  display: block;
+  background-color: #FFF;
+  height: 2px;
+  width: 24px;
+  transition: 0.3s;
+}
+
+.move .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line2 {
+  opacity: 0;
+}
+
+.move .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* ==================== Home Page ==================== */
+.home {
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+  background-color: #c7e9fc;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.homeContent {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.homeImage {
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  margin-top: 100px;
+  border-radius: 5%;
+  border-bottom-left-radius: 9%;
+  border-bottom-right-radius: 9%;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro #name {
+  font-size: 3.5rem;
+  line-height: 8rem;
+  color: #242557;
+}
+
+.intro p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #33347e;
+  max-width: 600px;
+}
+
+.intro #title {
+  font-size: 0.9rem;
+  color: #33347e;
+}
+
+.color {
+  color: #77D5D5;
+}
+
+.uil-import {
+  padding-right: 10px;
+}
+
+/* ==================== About Page ==================== */
+.about {
+  background-color: #ffffff;
+  padding: 0;
+  display:block;
+  box-sizing: border-box;
+  scroll-behavior: auto;
+  max-width: 1024px;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+
+/* ==================== Education Page ==================== */
+.education {
+  background-color: #c7e9fc;
+  display: grid;
+  grid-template-columns: auto;
+  align-content: center;
+  padding-bottom: 7rem;
+}
+
+.education-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.educationBox {
+  width: 400px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  margin: 30px;
+  background: #120f31;
+  border-radius: 0.4em;
+}
+
+.educationBox:hover {
+  transform: scale(1.05);
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.educationBox .uil {
+  font-size: 1.7rem;
+  color: #ffe600;
+  padding: 10px 18px;
+  border-radius: 50%;
+  border: 2px dashed;
+  border-color: #FFD9BA;
+}
+
+.educationBox h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: #ffe600;
+}
+
+.educationBox p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* =================== Contact Form ==================== */
+label {
+  color: #272274;
+  font-weight: 1rem;
+}
+
+.contact {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto;
+  align-content: center;
+}
+
+.contactForm {
+  max-width: 450px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contactForm .format, .contactForm textarea {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 15px;
+  color: #000;
+  background: #c7e9fc;
+  border-radius: 0.4rem;
+}
+
+select option {
+  padding: 15px;
+  font-weight: 600;
+}
+
+select {
+  margin-bottom: 20px;
+}
+
+
+#error pre {
+  color: #DF4759;
+  margin-bottom: 20px;
+  font-weight: 200;
+  padding: 0 15px;
+}
+
+#error {
+  background: #0F0119;
+  margin-bottom: 20px;
+}
+
+#error h3 {
+  color: #FFC18F;
+  margin-bottom: 20px;
+  padding: 15px 15px 0 15px;
+}
+
+/* =================== Footer ==================== */
+.footer {
+  background: #0F0119;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  color: #FFC18F;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer p {
+  color: #ADEDEA;
+  margin-bottom: 20px;
+}
+
+/* ==================== Making the website responsive using media queries ==================== */
+/* Smaller Size */
+@media (max-width: 850px) {
+  .menuIcon {
+      display: grid;
+      grid-template-columns: auto;
+      position: fixed;
+      float: left;
+      padding: 20px;
+      background-color: #0F0119;
+  }
+
+  .navLinks {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: #0F0119;
+      display: grid;
+      grid-template-columns: auto;
+      align-items: center;
+      padding: 50px 20px;
+      z-index: 300;
+  }
+
+  .openMenu {
+      right: 0;
+      transition: 0.5s;
+  }
+
+  .navLink {
+      display: block;
+      margin: 1rem 0;
+  }
+
+  #title {
+      font-size: 1.3rem;
+  }
+
+  #name {
+      font-size: 4rem;
+      line-height: 6rem;
+  }
+
+  #welcomingMessage {
+      font-size: 0.75rem;
+  }
+
+  .about {
+      grid-template-columns: 1fr;
+  }
+
+  .heading {
+      font-size: 3rem;
+  }
+}
